@@ -1,4 +1,4 @@
-// STEP 1: Create a header component.
+// STEP 1: Create a Header component.
 // -----------------------
 // Using a function create the component you see below:
 //
@@ -9,4 +9,28 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+function Header() {
+
+    const
+    //create containers following the example above
+        mainHeader = document.createElement('div'),
+        dateSpan = document.createElement('span'),
+        mainTitle = document.createElement('h1'),
+        tempurature = document.createElement('span');
+
+    // create var for the header-container so we can append to it.     
+    headContainer = document.querySelector('.header-container');
+
+    headContainer.appendChild(mainHeader);
+    mainHeader.appendChild(dateSpan);
+    mainHeader.appendChild(mainTitle);
+    mainHeader.appendChild(tempurature);
+
+    mainHeader.classList('header');
+    dateSpan.classList('date');
+    tempurature.classList('temp');
+
+    return headContainer;
+
+
+}
