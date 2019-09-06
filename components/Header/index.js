@@ -18,19 +18,26 @@ function Header() {
         mainTitle = document.createElement('h1'),
         tempurature = document.createElement('span');
 
-    // create var for the header-container so we can append to it.     
-    headContainer = document.querySelector('.header-container');
 
-    headContainer.appendChild(mainHeader);
+    
     mainHeader.appendChild(dateSpan);
     mainHeader.appendChild(mainTitle);
     mainHeader.appendChild(tempurature);
 
-    mainHeader.classList('header');
-    dateSpan.classList('date');
-    tempurature.classList('temp');
+    mainHeader.classList.add('header');
+    dateSpan.classList.add('date');
+    tempurature.classList.add('temp');
 
-    return headContainer;
+    mainTitle.textContent = 'Lambda Times';
+    dateSpan.textContent = 'Smarch 28, 2019';
+    tempurature.textContent = '98&#176;';	
+
+
+    return mainHeader;
 
 
 }
+
+ // create var for the header-container so we can append to it.
+headContainer = document.querySelector('.header-container');
+headContainer.appendChild(Header());
