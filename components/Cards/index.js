@@ -35,13 +35,24 @@ function articlesMain(article){
 
     card.classList.add('card');
     headline.classList.add('headline');
-    
+    headline.textContent = article.headline;
+    author.classList.add('author');
+    imageContainer.classList.add('img-container');
+    image.src = article.authorPhoto;
+    authorsName.textContent = article.authorName;
+
+    return card;
+
             
 }
+
+
 
 axios
     .get('https://lambda-times-backend.herokuapp.com/articles')
     .then(res => {
         console.log(res.data.articles);
-        
+        res.data.articles.forEach(article => {
+
+        })
     })

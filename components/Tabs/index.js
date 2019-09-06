@@ -8,6 +8,9 @@
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
 
+
+
+// function to create the tabs
 function theTabs(topics){
     let tabTopic = document.createElement('div');
     tabTopic.classList.add('tab');
@@ -15,8 +18,11 @@ function theTabs(topics){
 
     return tabTopic;
 }
+// const to create the place to put the tabs
 const topics = document.querySelector('.topics');
 
+
+// hotline bling to axios
 axios
     .get('https://lambda-times-backend.herokuapp.com/topics')
     .then(res => {
