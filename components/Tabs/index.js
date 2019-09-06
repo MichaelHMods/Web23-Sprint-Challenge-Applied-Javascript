@@ -22,7 +22,7 @@ function theTabs(topics){
 const topics = document.querySelector('.topics');
 
 
-// hotline bling to axios
+// call to axios
 axios
     .get('https://lambda-times-backend.herokuapp.com/topics')
     .then(res => {
